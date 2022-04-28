@@ -1,6 +1,6 @@
 general:
     debug : False # Debug mode, only for development
-    instance_name : "searx" # displayed name
+    instance_name : "searx cactus edition" # displayed name
     contact_url: False # mailto:contact@example.com
     enable_stats: False # activate /stats page - note: it may leak usage data
 
@@ -43,7 +43,7 @@ ui:
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
         oscar_style : logicodev # default style of oscar
-#   results_on_new_tab: False  # Open result links in a new tab by default
+    results_on_new_tab: True # Open result links in a new tab by default
 #   categories_order :
 #     - general
 #     - files
