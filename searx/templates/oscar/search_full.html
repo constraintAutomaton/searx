@@ -4,6 +4,12 @@
     {% if rtl %}
     <div class="input-group">
     {% else %}
+    <div class="col-md-8 col-md-offset-2  advanced" >
+        {% include 'oscar/advanced.html' %}
+        <div id="advanced-search-container">
+            {% include 'oscar/categories.html' %}
+        </div>
+    </div>
     <div class="input-group col-md-8 col-md-offset-2">
     {% endif %}
         <input type="search" autofocus name="q" class="form-control input-lg autofocus" id="q" placeholder="{{ _('Search for...') }}" aria-label="{{ _('Search for...') }}" autocomplete="off" value="{{ q }}" accesskey="s">
@@ -12,8 +18,17 @@
             <button type="reset" class="btn btn-default input-lg" aria-label="{{ _('Clear search') }}"><span class="hide_if_nojs">{{ icon('remove') }}</span><span class="hidden active_if_nojs">{{ _('Clear') }}</span></button>
         </span>
     </div>
-    <div class="col-md-8 col-md-offset-2  advanced">
-        {% include 'oscar/advanced.html' %}
+    
+    <div class="col-md-8 col-md-offset-2  advanced">  
+            <div class="row">
+              <div class="col-xs-6">
+                {%- include 'oscar/time-range.html' -%}
+              </div>
+              <div class="col-xs-6">
+                {%- include 'oscar/languages.html' -%}
+              </div>
+            </div>
     </div>
+    
 
 </form><!-- / #search_form_full -->
